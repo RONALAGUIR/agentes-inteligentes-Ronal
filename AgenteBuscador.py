@@ -11,13 +11,14 @@ def agente_buscador():
     grid[objeto_x][objeto_y] = 'O'
 
     def mostrar_cuadricula():
-        os.system('cls' if os.name == 'nt' else 'clear')    
+        os.system('cls' if os.name == 'nt' else 'clear') 
+        print("Matriz del Agente Buscador")
         for fila in grid:
             print(' | '.join([f"{celda:^3}" for celda in fila])) 
         print("\n")
 
     while (agente_x, agente_y) != (objeto_x, objeto_y):
-        grid[agente_x][agente_y] = 'A' 
+        grid[agente_x][agente_y] = 'R' 
         mostrar_cuadricula()
         time.sleep(0.5) 
         grid[agente_x][agente_y] = ' '
